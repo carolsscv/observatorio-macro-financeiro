@@ -1,0 +1,1 @@
+Abra `eda_exploratoria.ipynb`, execute todas as células com a API do BCB acessível e salve o notebook com as saídas e gráficos visíveis antes da entrega.

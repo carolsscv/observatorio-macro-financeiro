@@ -1,0 +1,1 @@
+Os arquivos CSV brutos e tratados serão gerados automaticamente ao executar `python -m src.etl`. Não há dados fictícios incluídos no repositório.

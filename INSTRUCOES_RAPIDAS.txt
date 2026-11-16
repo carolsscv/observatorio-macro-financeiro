@@ -1,0 +1,23 @@
+OBSERVATÓRIO MACRO-FINANCEIRO — COMEÇAR AQUI
+
+1) Descompacte a pasta.
+2) Abra a pasta no VS Code ou terminal.
+3) Instale Python 3.10+.
+4) Execute:
+   python -m venv .venv
+   source .venv/bin/activate        (Mac/Linux)
+   .venv\Scripts\activate         (Windows)
+   pip install -r requirements.txt
+5) Rode o ETL:
+   python -m src.etl
+6) Abra notebooks/eda_exploratoria.ipynb e execute TODAS as células. Salve com gráficos/saídas.
+7) Rode:
+   streamlit run app.py
+8) Teste todas as abas, filtros e download CSV.
+9) Publique no GitHub e Streamlit Community Cloud.
+10) Crie o Trello público, tire print, atualize README e grave o pitch.
+
+IMPORTANTE:
+- Não invente resultados: preencha a seção de resultados do README após rodar a análise.
+- O pacote contém o código e a estrutura, mas não publica automaticamente no seu GitHub/Streamlit nem cria o Trello ou grava o vídeo.
+- Não envie .streamlit/secrets.toml, senhas ou tokens ao GitHub.
