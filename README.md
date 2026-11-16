@@ -80,15 +80,15 @@ Crie um repositório público e envie todos os arquivos, exceto `secrets.toml`, 
 Conecte o repositório GitHub, selecione `app.py` como arquivo principal e publique. O app consulta a API pública do BCB; portanto, precisa de acesso à internet no ambiente de execução.
 
 ## 12. Trello e vídeo
-- Quadro Trello público: **[INSERIR LINK]**
-- Captura do quadro Kanban: **[INSERIR IMAGEM NO REPOSITÓRIO]**
-- Aplicação publicada: **[INSERIR LINK STREAMLIT]**
-- Vídeo pitch (3 a 5 minutos): **[INSERIR LINK]**
+- Quadro Trello público: **https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro**
+- Captura do quadro Kanban: **<img width="872" height="462" alt="image" src="https://github.com/user-attachments/assets/9f1bf36a-61de-49e6-b5e9-5d6fe596dbd7" />
+**
+- Aplicação publicada: **https://observatorio-macro-financeiro-h5anmkpdqbkf7zpfx25kku.streamlit.app**
 
 Consulte `TRELLO_CARDS.md` e `PITCH.md` para concluir essas entregas.
 
 ## 13. Autoria e referências
-Autoria: **[INSERIR NOME]**  
+Autoria: **Carolina Correa**  
 Curso: Visualização de Dados e Business Intelligence  
 Fonte: Banco Central do Brasil — SGS: https://www3.bcb.gov.br/sgspub/
 
