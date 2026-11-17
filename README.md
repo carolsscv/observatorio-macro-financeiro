@@ -22,10 +22,12 @@ API pública do Sistema Gerenciador de Séries Temporais do Banco Central:
 Período de referência do projeto: 01/01/2020 a 31/12/2023. A extração ocorre via API do BCB e pode depender da disponibilidade do serviço.
 
 ## 4. Pipeline ETL
+
 O arquivo `src/etl.py` concentra funções reutilizáveis:
+
 - Extração das cinco séries via API SGS.
 - Conversão de datas para datetime e valores para numérico.
-- Remoção de nulos inválidos e duplicidades.
+- Tratamento de valores ausentes e remoção de registros duplicados.
 - Padronização mensal e combinação das séries.
 - Cálculo do juro real ex-post estimado.
 - Exportação para `data/raw/` e `data/processed/`.
@@ -91,7 +93,12 @@ A análise é descritiva. Correlação não implica causalidade. A média mensal
 Crie um repositório público e envie todos os arquivos, exceto `secrets.toml`, ambientes virtuais e caches.
 
 ### Streamlit Community Cloud
-Conecte o repositório GitHub, selecione `app.py` como arquivo principal e publique. O app consulta a API pública do BCB; portanto, precisa de acesso à internet no ambiente de execução.
+
+O dashboard foi publicado no Streamlit Community Cloud, integrado ao repositório público do GitHub, utilizando o arquivo `app.py` como ponto de entrada.
+
+A aplicação consulta as séries históricas disponibilizadas pela API pública do Banco Central do Brasil (SGS/BCB), necessitando de acesso à internet para atualização dos dados.
+
+**Aplicação publicada:** https://observatorio-macro-financeiro-h5anmkpdqbkf7zpfx25kku.streamlit.app
 
 ## 12. Trello
 - Quadro Trello público: https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro
@@ -99,7 +106,6 @@ Conecte o repositório GitHub, selecione `app.py` como arquivo principal e publi
 
 - Aplicação publicada: **https://observatorio-macro-financeiro-h5anmkpdqbkf7zpfx25kku.streamlit.app**
 
-Consulte `TRELLO_CARDS.md` e `PITCH.md` para concluir essas entregas.
 
 ## 13. Autoria e referências
 Autoria: **Carolina Correa**  
