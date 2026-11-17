@@ -56,21 +56,35 @@ if df.empty:
     st.warning("Não há observações para o período selecionado.")
     st.stop()
 
-latest = df.sort_values("date").iloc[-1]
-previous = df.sort_values("date").iloc[-2] if len(df) > 1 else latest
-def metric_delta(col):
-    if pd.isna(latest[col]) or pd.isna(previous[col]):
-        return None
-    return float(latest[col] - previous[col])
+
+# Indicadores: médias do período selecionado
+selic_media = df["selic_meta"].mean()
+ipca_media = df["ipca_12m"].mean()
+juro_real_medio = df["juro_real_ex_post"].mean()
+dolar_medio = df["dolar_ptax"].mean()
 
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Selic Meta média (%)", f"{df['selic_meta'].dropna().iloc[-1]:.2f}" if df["selic_meta"].notna().any() else "—",
-          f"{metric_delta('selic_meta'):+.2f} p.p." if metric_delta("selic_meta") is not None else None)
-k2.metric("IPCA 12 meses (%)", f"{latest['ipca_12m']:.2f}" if pd.notna(latest["ipca_12m"]) else "—",
-          f"{metric_delta('ipca_12m'):+.2f} p.p." if metric_delta("ipca_12m") is not None else None)
-k3.metric("Juro real ex-post (%)", f"{latest['juro_real_ex_post']:.2f}" if pd.notna(latest["juro_real_ex_post"]) else "—",
-          f"{metric_delta('juro_real_ex_post'):+.2f} p.p." if metric_delta("juro_real_ex_post") is not None else None)
-k4.metric("Dólar PTAX médio (R$)", f"{df['dolar_ptax'].mean():.2f}" if df["dolar_ptax"].notna().any() else "—")
+
+k1.metric(
+    "Selic Meta média (%)",
+    f"{selic_media:.2f}"
+)
+
+k2.metric(
+    "IPCA 12 meses médio (%)",
+    f"{ipca_media:.2f}"
+)
+
+k3.metric(
+    "Juro real ex-post médio (%)",
+    f"{juro_real_medio:.2f}"
+)
+
+k4.metric(
+    "Dólar PTAX médio (R$)",
+    f"{dolar_medio:.2f}"
+)
+
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "Visão geral", "Política monetária", "Câmbio", "Atividade econômica", "Correlação e dados"
