@@ -57,7 +57,21 @@ O aplicativo contém:
 - Filtros de período e exportação CSV.
 
 ## 8. Resultados
-**Preencher após executar o ETL e o notebook com os dados oficiais.** Registre aqui valores efetivamente calculados, datas de máximas/mínimas e correlações observadas. Não inserir números estimados ou inventados.
+
+A análise exploratória considerou 48 observações mensais, entre janeiro de 2020 e dezembro de 2023.
+
+**Principais resultados encontrados:**
+
+- **Selic Meta:** média de 8,31% no período, com mínimo de 2,00% e máximo de 13,75%.
+- **IPCA acumulado em 12 meses:** média de 6,36%, variando de 1,88% a 12,13%.
+- **Dólar PTAX:** média de R$ 5,18, com valores entre R$ 4,15 e R$ 5,65.
+- **IBC-Br:** indicador variou entre 82,94 e 104,93 pontos.
+
+**Análise de correlação:**
+
+A maior correlação positiva observada foi entre Selic Meta e IBC-Br (0,73). Entre as correlações negativas, destacaram-se dólar PTAX e IBC-Br (-0,32) e Selic Meta e dólar PTAX (-0,31).
+
+Os resultados demonstram diferentes comportamentos dos indicadores macroeconômicos brasileiros ao longo do período analisado. As correlações são descritivas e não representam relações de causalidade.
 
 ## 9. Limitações
 A análise é descritiva. Correlação não implica causalidade. A média mensal de séries diárias reduz a granularidade. O juro real ex-post é uma aproximação calculada com Selic Meta e IPCA acumulado em 12 meses, não uma medida completa de retorno real de investimento. O IBC-Br é indicador antecedente/proxy e não substitui o PIB.
@@ -79,10 +93,10 @@ Crie um repositório público e envie todos os arquivos, exceto `secrets.toml`, 
 ### Streamlit Community Cloud
 Conecte o repositório GitHub, selecione `app.py` como arquivo principal e publique. O app consulta a API pública do BCB; portanto, precisa de acesso à internet no ambiente de execução.
 
-## 12. Trello e vídeo
-- Quadro Trello público: **https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro**
+## 12. Trello
+- Quadro Trello público: https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro**
 - Captura do quadro Kanban: **<img width="872" height="462" alt="image" src="https://github.com/user-attachments/assets/9f1bf36a-61de-49e6-b5e9-5d6fe596dbd7" />
-**
+
 - Aplicação publicada: **https://observatorio-macro-financeiro-h5anmkpdqbkf7zpfx25kku.streamlit.app**
 
 Consulte `TRELLO_CARDS.md` e `PITCH.md` para concluir essas entregas.
