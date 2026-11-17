@@ -94,8 +94,8 @@ Crie um repositório público e envie todos os arquivos, exceto `secrets.toml`, 
 Conecte o repositório GitHub, selecione `app.py` como arquivo principal e publique. O app consulta a API pública do BCB; portanto, precisa de acesso à internet no ambiente de execução.
 
 ## 12. Trello
-- Quadro Trello público: https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro**
-- Captura do quadro Kanban: **<img width="872" height="462" alt="image" src="https://github.com/user-attachments/assets/9f1bf36a-61de-49e6-b5e9-5d6fe596dbd7" />
+- Quadro Trello público: https://trello.com/b/wQsh4kyA/projeto-bi-observatorio-macro-financeiro
+- Captura do quadro Kanban: <img width="872" height="462" alt="image" src="https://github.com/user-attachments/assets/9f1bf36a-61de-49e6-b5e9-5d6fe596dbd7" />
 
 - Aplicação publicada: **https://observatorio-macro-financeiro-h5anmkpdqbkf7zpfx25kku.streamlit.app**
 
